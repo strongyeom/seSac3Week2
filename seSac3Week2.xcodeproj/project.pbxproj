@@ -13,6 +13,7 @@
 		26E721842A6E110A0015696A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E721822A6E110A0015696A /* Main.storyboard */; };
 		26E721862A6E110C0015696A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E721852A6E110C0015696A /* Assets.xcassets */; };
 		26E721892A6E110C0015696A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E721872A6E110C0015696A /* LaunchScreen.storyboard */; };
+		26E721912A6E3E570015696A /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E721902A6E3E570015696A /* TransitionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		26E721852A6E110C0015696A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26E721882A6E110C0015696A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26E7218A2A6E110C0015696A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26E721902A6E3E570015696A /* TransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				26E7217C2A6E110A0015696A /* AppDelegate.swift */,
 				26E7217E2A6E110A0015696A /* SceneDelegate.swift */,
 				26E721802A6E110A0015696A /* ViewController.swift */,
+				26E721902A6E3E570015696A /* TransitionViewController.swift */,
 				26E721822A6E110A0015696A /* Main.storyboard */,
 				26E721852A6E110C0015696A /* Assets.xcassets */,
 				26E721872A6E110C0015696A /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				26E721812A6E110A0015696A /* ViewController.swift in Sources */,
 				26E7217D2A6E110A0015696A /* AppDelegate.swift in Sources */,
 				26E7217F2A6E110A0015696A /* SceneDelegate.swift in Sources */,
+				26E721912A6E3E570015696A /* TransitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
