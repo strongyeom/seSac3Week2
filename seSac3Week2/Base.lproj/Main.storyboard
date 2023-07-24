@@ -123,6 +123,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-PQ-WHk">
+                                <rect key="frame" x="20" y="289" width="353" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="cdL-5j-XNy"/>
+                                </constraints>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 010- 2222- 2222 reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat www.naver.com cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -130,7 +142,10 @@
                         <constraints>
                             <constraint firstItem="r8g-tC-syH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1qh-Cj-IfC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8g-tC-syH" secondAttribute="trailing" constant="20" id="Aco-OF-1c9"/>
+                            <constraint firstItem="iZf-PQ-WHk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KJT-B1-zYf"/>
                             <constraint firstItem="r8g-tC-syH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="T2d-pC-8Mp"/>
+                            <constraint firstItem="iZf-PQ-WHk" firstAttribute="top" secondItem="r8g-tC-syH" secondAttribute="bottom" constant="20" id="p0b-YI-x5H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iZf-PQ-WHk" secondAttribute="trailing" constant="20" id="vAB-x5-Ki1"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="VWs-31-WoK" appends="YES" id="zJB-DF-cAg"/>
@@ -164,6 +179,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
