@@ -211,9 +211,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <segue destination="FQf-bH-waI" kind="showDetail" id="iJy-vH-pxb"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hab-KI-vYZ"/>
@@ -251,6 +248,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boX-sH-DqL">
+                                <rect key="frame" x="60" y="99" width="62" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <segue destination="vJI-6n-fmm" kind="unwind" unwindAction="unWindButton:" id="cfi-TF-DAi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H9k-LN-hSt"/>
                         <color key="backgroundColor" white="1" alpha="0.29878222040769431" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -258,6 +264,7 @@
                     <navigationItem key="navigationItem" id="VCf-RK-yxs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Q0-vL-Wb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vJI-6n-fmm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2052.6717557251909" y="455.63380281690144"/>
         </scene>
@@ -280,9 +287,6 @@
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="TiG-1W-Mpa"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="figure.2.arms.open" catalog="system" width="128" height="105"/>
         <image name="figure.stand" catalog="system" width="74" height="128"/>
