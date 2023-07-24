@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet var thirdLabel: UILabel!
     @IBOutlet var thirdBuuton: UIButton!
 
+    let list = ["가사0", "가사1", "가사2"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
         // tag 기능을 통해 어떤 버튼이 눌렸는지 알 수 있음
         print("sender.tag",sender.tag)
         
+        print(list[sender.tag])
         
     }
     
