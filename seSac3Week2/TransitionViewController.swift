@@ -6,18 +6,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TransitionViewController: UIViewController {
 
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var inputTextField: UITextField!
     
+    @IBOutlet var imageView: UIImageView!
     
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        let url = URL(string: "https://images.unsplash.com/photo-1690148136337-2304c30b5420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80")
+        imageView.kf.setImage(with: url)
+        
       
     }
    

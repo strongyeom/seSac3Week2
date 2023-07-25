@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -198,6 +199,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0HH-hb-Vzx">
+                                <rect key="frame" x="96.666666666666686" y="314" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="EDc-Gs-1Rl"/>
+                                    <constraint firstAttribute="width" secondItem="0HH-hb-Vzx" secondAttribute="height" multiplier="1:1" id="I9G-gU-7Fk"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KXz-2h-gP7">
                                 <rect key="frame" x="159" y="264" width="75" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
@@ -205,12 +213,6 @@
                                 <connections>
                                     <segue destination="FQf-bH-waI" kind="presentation" id="TiG-1W-Mpa"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hZr-U4-z4z">
-                                <rect key="frame" x="159" y="409" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hab-KI-vYZ"/>
@@ -223,10 +225,13 @@
                             <constraint firstItem="VD3-wL-oG2" firstAttribute="centerX" secondItem="hab-KI-vYZ" secondAttribute="centerX" id="Xhq-HI-6yg"/>
                             <constraint firstItem="0Cw-Fy-A0g" firstAttribute="top" secondItem="VD3-wL-oG2" secondAttribute="bottom" constant="20" id="Yts-8d-2P4"/>
                             <constraint firstItem="hab-KI-vYZ" firstAttribute="trailing" secondItem="0Cw-Fy-A0g" secondAttribute="trailing" constant="20" id="aRt-Xc-XnD"/>
+                            <constraint firstItem="0HH-hb-Vzx" firstAttribute="centerY" secondItem="hab-KI-vYZ" secondAttribute="centerY" id="hmi-4z-MHg"/>
+                            <constraint firstItem="0HH-hb-Vzx" firstAttribute="centerX" secondItem="hab-KI-vYZ" secondAttribute="centerX" id="jdS-3s-4cq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="second" image="figure.2.arms.open" catalog="system" id="7dZ-16-bxH"/>
                     <connections>
+                        <outlet property="imageView" destination="0HH-hb-Vzx" id="Tg3-um-FLC"/>
                         <outlet property="inputTextField" destination="0Cw-Fy-A0g" id="3jG-2y-B4X"/>
                         <outlet property="segmentControl" destination="VD3-wL-oG2" id="pDP-ph-or3"/>
                     </connections>
@@ -234,6 +239,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsa-W6-Lwt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1275.5725190839694" y="455.63380281690144"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="j8c-Pi-jkE">
+            <objects>
+                <viewController id="P20-ke-qgU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mfv-V7-BzO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1A-ra-yzJ" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="59" width="393" height="340.66666666666669"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용입니다." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-1k-NQs" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="419.66666666666669" width="353" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gfI-gp-4GB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" name="TouchBarBezel"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.41198891401290894" green="0.91204386949539185" blue="0.29618433117866516" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cg1-LW-tmG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m1A-ra-yzJ" firstAttribute="leading" secondItem="Cg1-LW-tmG" secondAttribute="leading" id="RS9-mo-uJ7"/>
+                            <constraint firstItem="m1A-ra-yzJ" firstAttribute="top" secondItem="Cg1-LW-tmG" secondAttribute="top" id="ckz-11-Ye9"/>
+                            <constraint firstItem="s4a-1k-NQs" firstAttribute="leading" secondItem="Cg1-LW-tmG" secondAttribute="leading" constant="20" id="dCU-6q-eaL"/>
+                            <constraint firstItem="s4a-1k-NQs" firstAttribute="top" secondItem="m1A-ra-yzJ" secondAttribute="bottom" constant="20" id="fvQ-ol-wcf"/>
+                            <constraint firstItem="Cg1-LW-tmG" firstAttribute="trailing" secondItem="m1A-ra-yzJ" secondAttribute="trailing" id="lu5-Qd-a5T"/>
+                            <constraint firstItem="Cg1-LW-tmG" firstAttribute="trailing" secondItem="s4a-1k-NQs" secondAttribute="trailing" constant="20" id="rRb-aK-bBb"/>
+                            <constraint firstItem="m1A-ra-yzJ" firstAttribute="height" secondItem="mfv-V7-BzO" secondAttribute="height" multiplier="0.4" id="xsK-oA-WnQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9ku-wP-C9m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vSH-2n-e2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="1219"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WxM-W9-j5a">
@@ -274,12 +332,14 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="VMU-Jb-Url" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R7P-3E-htP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="57U-gH-n5w"/>
                         <segue destination="Ohy-Ch-pyz" kind="relationship" relationship="viewControllers" id="LTN-Ne-HUY"/>
+                        <segue destination="P20-ke-qgU" kind="relationship" relationship="viewControllers" id="vgC-60-gb8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilh-en-PdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -290,6 +350,9 @@
     <resources>
         <image name="figure.2.arms.open" catalog="system" width="128" height="105"/>
         <image name="figure.stand" catalog="system" width="74" height="128"/>
+        <namedColor name="TouchBarBezel">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
