@@ -243,20 +243,20 @@
             </objects>
             <point key="canvasLocation" x="1275.5725190839694" y="455.63380281690144"/>
         </scene>
-        <!--Item-->
+        <!--Calendar View Controller-->
         <scene sceneID="j8c-Pi-jkE">
             <objects>
-                <viewController id="P20-ke-qgU" sceneMemberID="viewController">
+                <viewController id="P20-ke-qgU" customClass="CalendarViewController" customModule="seSac3Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mfv-V7-BzO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1A-ra-yzJ" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="59" width="393" height="340.66666666666669"/>
+                                <rect key="frame" x="0.0" y="103.00000000000003" width="393" height="340.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="내용입니다." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s4a-1k-NQs" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="20" y="419.66666666666669" width="353" height="50"/>
+                                <rect key="frame" x="20" y="463.66666666666669" width="353" height="50.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gfI-gp-4GB"/>
                                 </constraints>
@@ -277,6 +277,45 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDo-Kp-Bo5">
+                                <rect key="frame" x="23" y="546" width="65" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="show"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jz-AU-Cbb">
+                                <rect key="frame" x="23" y="610" width="214" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="modal automatic (sheet )"/>
+                                <connections>
+                                    <segue destination="Ovo-mf-rcG" kind="presentation" modalPresentationStyle="automatic" id="e7C-wH-8Z5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXR-2J-MYl">
+                                <rect key="frame" x="23" y="690" width="150" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="modal fullscreen"/>
+                                <connections>
+                                    <segue destination="Ovo-mf-rcG" kind="presentation" modalPresentationStyle="fullScreen" id="uD8-RN-Taa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipd-O2-dcC">
+                                <rect key="frame" x="126" y="546" width="111" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="show detail"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6o-N7-0bb">
+                                <rect key="frame" x="20" y="734" width="235" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="modal current context"/>
+                                <connections>
+                                    <segue destination="Ovo-mf-rcG" kind="presentation" modalPresentationStyle="overCurrentContext" id="szh-X3-9DF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cg1-LW-tmG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -290,16 +329,43 @@
                             <constraint firstItem="m1A-ra-yzJ" firstAttribute="height" secondItem="mfv-V7-BzO" secondAttribute="height" multiplier="0.4" id="xsK-oA-WnQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9ku-wP-C9m"/>
+                    <navigationItem key="navigationItem" id="DSU-LE-1AV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSH-2n-e2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="1219"/>
+            <point key="canvasLocation" x="2162.5954198473282" y="1218.3098591549297"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="XnE-vm-Hki">
+            <objects>
+                <viewController id="Ovo-mf-rcG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yo7-p4-qyo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-tF-fUE">
+                                <rect key="frame" x="126" y="99" width="141" height="107"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="dQw-ok-djq" kind="unwind" unwindAction="unWindSegueToCalendar:" id="jt4-j8-bwp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MPM-zq-q8p"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.32901808794806986" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBA-wj-VM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="dQw-ok-djq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3136.6412213740455" y="1217.605633802817"/>
+        </scene>
+        <!--Example1 View Controller-->
         <scene sceneID="WxM-W9-j5a">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="FQf-bH-waI" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="FQf-bH-waI" customClass="Example1ViewController" customModule="seSac3Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9J0-Ck-BQA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -315,7 +381,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                 <connections>
-                                    <segue destination="vJI-6n-fmm" kind="unwind" unwindAction="unWindButton:" id="cfi-TF-DAi"/>
+                                    <segue destination="oFo-Jw-Sx3" kind="show" id="Y5x-eG-m0l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -325,9 +391,63 @@
                     <navigationItem key="navigationItem" id="VCf-RK-yxs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Q0-vL-Wb2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="vJI-6n-fmm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2052.6717557251909" y="455.63380281690144"/>
+        </scene>
+        <!--Example2 View Controller-->
+        <scene sceneID="aXS-cU-9IK">
+            <objects>
+                <viewController id="oFo-Jw-Sx3" customClass="Example2ViewController" customModule="seSac3Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7XJ-gA-gNG">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ul-zN-OJy">
+                                <rect key="frame" x="141" y="309" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <segue destination="toh-xb-Dew" kind="show" id="0YR-qj-HZA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0F2-vm-mw7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qyp-qX-i2q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqN-he-ALg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2883" y="456"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hWW-HE-NaX">
+            <objects>
+                <viewController id="toh-xb-Dew" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pQv-bS-Zjr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcA-OY-cTh">
+                                <rect key="frame" x="159" y="283" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="kId-Lv-phn" kind="unwind" unwindAction="unWindButton:" id="PFv-y8-dn7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EjC-bl-iwj"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TTj-Db-aiK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZC-fj-QcG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kId-Lv-phn" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3611" y="456"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4VX-ZQ-VPl">
@@ -342,14 +462,36 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="57U-gH-n5w"/>
                         <segue destination="Ohy-Ch-pyz" kind="relationship" relationship="viewControllers" id="LTN-Ne-HUY"/>
-                        <segue destination="P20-ke-qgU" kind="relationship" relationship="viewControllers" id="vgC-60-gb8"/>
+                        <segue destination="0tw-Al-lLU" kind="relationship" relationship="viewControllers" id="vgC-60-gb8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilh-en-PdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="eIy-6f-oNd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0tw-Al-lLU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9ku-wP-C9m"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljG-pc-PSf">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="P20-ke-qgU" kind="relationship" relationship="rootViewController" id="xFq-Wg-u0r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkC-On-Jud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235.8778625954199" y="1218.3098591549297"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="szh-X3-9DF"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="figure.2.arms.open" catalog="system" width="128" height="105"/>
         <image name="figure.stand" catalog="system" width="74" height="128"/>
@@ -364,6 +506,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
